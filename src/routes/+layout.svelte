@@ -36,4 +36,8 @@
 
 <style>
 	@import '../styles/global.css';
+
+	.global-layout {
+		position: relative;
+	}
 </style>

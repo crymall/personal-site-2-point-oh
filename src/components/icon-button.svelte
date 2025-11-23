@@ -16,7 +16,7 @@
 	}
 
 	.lamp-button {
-		position: fixed;
+		position: absolute;
 		height: 38px;
 		width: 38px;
 		top: 10px;
@@ -29,7 +29,7 @@
 	}
 
 	.burger-button {
-		position: fixed;
+		position: absolute;
 		bottom: 10px;
 		right: 15px;
 		height: 30px;
