@@ -1,5 +1,5 @@
 <div class="body-container">
-  <!-- <div class="body-description">
+	<!-- <div class="body-description">
     <h2>hello, my name is Reed</h2>
     <p>who am I?</p>
   </div>
@@ -10,5 +10,23 @@
 </div>
 
 <style>
-  @import '../styles/home.css';
+	@import '../styles/variables.css';
+
+	.body-container {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 10px;
+
+		@media (max-width: 600px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	.body-description {
+		padding-left: 5px;
+	}
+
+	img {
+		max-width: 800px;
+	}
 </style>

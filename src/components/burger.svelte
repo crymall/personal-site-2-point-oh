@@ -1,10 +1,11 @@
 <script>
+	let { header, links } = $props();
 	let burgerOpen = $state(false);
 
 	const toggleBurgerOpen = () => {
 		burgerOpen = !burgerOpen;
 		const burger = document.querySelector('#burger');
-    burger.className = burgerOpen ? '' : 'hidden';
+		burger.className = burgerOpen ? '' : 'hidden';
 	};
 </script>
 
@@ -12,10 +13,11 @@
 	<button type="button" class="burger-icon" onclick={toggleBurgerOpen}>></button>
 
 	<nav id="burger" class="hidden">
-		<h1>joseph reed gaines</h1>
+		<h1>{header}</h1>
 		<div class="burger-sections">
-			<a href="/">home</a>
-			<a href="/contact">contact</a>
+			{#each links as link}
+				<a href={link.href}>{link.title}</a>
+			{/each}
 		</div>
 	</nav>
 </div>
