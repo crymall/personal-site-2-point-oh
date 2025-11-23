@@ -24,6 +24,19 @@
 
 	.body-description {
 		padding-left: 5px;
+
+		p {
+			font-size: 20px;
+			line-height: 26px;
+			margin: 15px 0px;
+
+			transition: font-size 0.2s;
+
+			@media (max-width: 600px) {
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
 	}
 
 	img {

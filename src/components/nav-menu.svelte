@@ -1,5 +1,5 @@
 <script>
-	import Burger from '../components/burger.svelte';
+	import Burger from './helpers/burger.svelte';
 	let { header, links } = $props();
 </script>
 
@@ -16,7 +16,7 @@
 
 <style>
 	h1 {
-		margin: 5px 0 0 10px;
+		margin: 15px 0 0 15px;
 		font-size: 27px;
 	}
 
@@ -34,11 +34,12 @@
 	.nav-sections {
 		display: flex;
 		flex-direction: column;
-		margin: 25px 0 0 25px;
+		margin: 30px 0 0 35px;
 
 		a {
 			text-decoration: none;
-			margin-bottom: 13px;
+			font-size: 20px;
+			margin-bottom: 14px;
 
 			&:hover {
 				font-style: italic;

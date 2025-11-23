@@ -1,4 +1,6 @@
 <script>
+	import IconButton from "../icon-button.svelte";
+
 	let { header, links } = $props();
 	let burgerOpen = $state(false);
 
@@ -10,7 +12,8 @@
 </script>
 
 <div class="burger-wrapper">
-	<button type="button" class="burger-icon" onclick={toggleBurgerOpen}>></button>
+	<IconButton buttonClass="burger-button" buttonFunc={toggleBurgerOpen} iconName="burger" />
+	<!-- <button type="button" class="burger-icon" onclick={toggleBurgerOpen}>></button> -->
 
 	<nav id="burger" class="hidden">
 		<h1>{header}</h1>
@@ -29,12 +32,5 @@
 		@media (max-width: 600px) {
 			display: block;
 		}
-	}
-
-	.burger-icon {
-		font-size: 30px;
-		position: fixed;
-		top: 8px;
-		left: 15px;
 	}
 </style>
