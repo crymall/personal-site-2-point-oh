@@ -1,0 +1,70 @@
+@import './variables.css';
+@import './reset.css';
+
+:global {
+	html {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+	}
+
+	body {
+		background-color: var(--light-gray);
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		min-height: 100%;
+
+		.global-layout {
+			display: flex;
+			height: 100%;
+		}
+
+		h1,
+		h2,
+		p,
+		div,
+		a,
+		button {
+			color: var(--dark-gray);
+			font-family: 'bitter', 'serif';
+		}
+
+		.sidenav {
+			border-right: 3px solid var(--dark-gray);
+		}
+
+		footer {
+			border-top: 3px solid var(--dark-gray);
+		}
+	}
+
+	body.dark-mode {
+		background-color: var(--dark-gray);
+
+		button {
+			background-color: var(--dark-gray);
+		}
+
+		p,
+		h1,
+		h2,
+		div,
+		a,
+		button {
+			color: var(--light-gray);
+		}
+
+		.sidenav {
+			border-right: 3px solid var(--light-gray);
+		}
+
+		footer {
+			border-top: 3px solid var(--light-gray);
+		}
+	}
+
+	.hidden {
+		display: none;
+	}
+}

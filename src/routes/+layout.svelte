@@ -1,6 +1,8 @@
 <script>
+	import { MediaQuery } from 'svelte/reactivity';
 	import favicon from '$lib/assets/favicon.svg';
 	import Icon from '../components/icon.svelte';
+	import Burger from '../components/burger.svelte';
 
 	let { children } = $props();
 	let darkMode = $state(true);
@@ -16,19 +18,27 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<nav class="topnav">
-	<div class="leftside">
-		<a href="/">Home</a>
-		<a href="/contact">Contact</a>
+<div class="global-layout">
+	<nav class="sidenav">
+		<h1>joseph reed gaines</h1>
+		<div class="nav-sections">
+			<a href="/">home</a>
+			<a href="/contact">contact</a>
+		</div>
+	</nav>
+
+	<Burger />
+
+	<div class="content">
+		{@render children()}
 	</div>
-	<button onclick={toggleDarkMode}>
+
+	<button type="button" onclick={toggleDarkMode} class="lamp-button">
 		<Icon name="lamp" className={darkMode ? 'light-fill' : 'dark-fill'} />
 	</button>
-</nav>
+</div>
 
-{@render children()}
-
-<style lang="scss">
-	@import '../styles/layout.scss';
+<style>
+	@import '../styles/global.css';
+	@import '../styles/layout.css';
 </style>
-

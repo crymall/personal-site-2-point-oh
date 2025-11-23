@@ -20,6 +20,6 @@
   {focusable}
   viewBox="0 0 {displayIcon.box} {displayIcon.box}">{@html displayIcon.svg}</svg>
 
-<style lang="scss">
-  @import '../styles/icon.scss';
+<style>
+  @import '../styles/icon.css';
 </style>

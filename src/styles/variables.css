@@ -1,5 +1,7 @@
-$lightgray: lightgray;
-$darkgray: #333333;
+:root {
+  --light-gray: lightgray;
+  --dark-gray: #333333;
+}
 
 @font-face {
   font-family: 'bitter';

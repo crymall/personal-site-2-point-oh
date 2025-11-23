@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './variables.css';
 
 svg {
   border-radius: 3px;
@@ -17,19 +17,19 @@ svg {
 }
 
 .dark-fill {
-  fill: $darkgray;
+  fill: var(--dark-gray);
 
   &:hover {
-    background-color: $darkgray;
-    fill: $lightgray
+    background-color: var(--dark-gray);
+    fill: var(--light-gray);
   }
 }
 
 .light-fill {
-  fill: $lightgray;
+  fill: var(--light-gray);
 
   &:hover {
-    background-color: $lightgray;
-    fill: $darkgray
+    background-color: var(--light-gray);
+    fill: var(--dark-gray);
   }
 }
