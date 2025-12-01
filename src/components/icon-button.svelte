@@ -19,10 +19,11 @@
 		position: absolute;
 		height: 38px;
 		width: 38px;
-		top: 10px;
+		top: 15px;
 		right: 15px;
+		z-index: 100;
 
-		@media (max-width: 600px) {
+		@media (max-width: 800px) {
 			height: 30px;
 			width: 30px;
 		}
@@ -34,5 +35,6 @@
 		right: 15px;
 		height: 30px;
 		width: 30px;
+		z-index: 100;
 	}
 </style>

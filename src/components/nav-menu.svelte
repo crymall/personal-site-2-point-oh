@@ -12,7 +12,7 @@
 	</div>
 </nav>
 
-<Burger {header} {links} />
+<Burger {links} />
 
 <style>
 	h1 {
@@ -26,7 +26,7 @@
 		padding: 10px 15px 0 10px;
 		min-width: 275px;
 
-		@media (max-width: 600px) {
+		@media (max-width: 800px) {
 			display: none;
 		}
 	}

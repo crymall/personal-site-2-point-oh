@@ -26,7 +26,7 @@
 			height 0.2s,
 			width 0.2s;
 
-		@media (max-width: 600px) {
+		@media (max-width: 800px) {
 			height: 22px;
 			width: 22px;
 		}
