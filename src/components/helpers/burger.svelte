@@ -73,7 +73,7 @@
 		}
 
 		h2 {
-			margin: 0 0 25px 0;
+			margin: 0 0 35px 0;
 			font-size: 70px;
 			transition: font-size 0.2s;
 

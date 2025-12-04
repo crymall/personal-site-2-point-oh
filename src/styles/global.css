@@ -32,6 +32,12 @@
 			font-family: 'bitter', 'serif';
 		}
 
+		footer {
+			@media (max-width: 810px) {
+				border-top: 3px solid var(--dark-gray);
+			}
+		}
+
 		#burger.open {
 			background-color: var(--light-gray);
 		}
@@ -77,6 +83,12 @@
 			color: var(--light-gray);
 		}
 
+		footer {
+			@media (max-width: 810px) {
+				border-top: 3px solid var(--light-gray);
+			}
+		}
+
 		#burger.open {
 			background-color: var(--dark-gray);
 		}
@@ -114,10 +126,11 @@
 		h2 {
 			margin: 0 0 10px 0;
 			font-size: 70px;
-			transition: font-size 0.2s;
+			transition: font-size 0.2s, margin 0.2s;
 
 			@media (max-width: 450px) {
 				font-size: 46px;
+				margin: 0 0 20px 0;
 			}
 		}
 
@@ -131,6 +144,12 @@
 			@media (max-width: 450px) {
 				font-size: 18px;
 				line-height: 20px;
+			}
+		}
+
+		footer {
+			@media (max-width: 810px) {
+				border-top: 3px solid var(--dark-gray);
 			}
 		}
 

@@ -22,16 +22,15 @@
 
 <div class="global-layout">
 	<NavMenu header="joseph reed gaines" links={navLinks} />
+	<IconButton buttonClass="lamp-button" buttonFunc={toggleDarkMode} iconName={'lamp'} />
 
 	<div class="content">
 		{@render children()}
-	</div>
 
-	<IconButton
-		buttonClass="lamp-button"
-		buttonFunc={toggleDarkMode}
-		iconName={'lamp'}
-	/>
+		<footer>
+			<p>© 2025 joseph reed gaines. all rights reserved.</p>
+		</footer>
+	</div>
 </div>
 
 <style>
@@ -39,11 +38,13 @@
 
 	.global-layout {
 		position: relative;
+		display: flex;
 	}
 
 	.content {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		margin: 25px 65px 0 40px;
 		max-width: 810px;
 		transition: margin 0.2s;
@@ -53,7 +54,22 @@
 		}
 
 		@media (max-width: 450px) {
-			margin: 50px 25px 0 15px;
+			margin: 50px 15px 0 15px;
+		}
+
+		@media (max-width: 400px) {
+			margin: 50px 5px 0 5px;
+		}
+	}
+
+	footer {
+		margin-top: 30px;
+		font-style: italic;
+		z-index: 100;
+
+		p {
+			margin: 10px 10px 0 10px;
+			font-size: 14px;
 		}
 	}
 </style>
