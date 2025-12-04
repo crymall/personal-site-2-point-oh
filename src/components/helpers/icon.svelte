@@ -26,9 +26,9 @@
 			height 0.2s,
 			width 0.2s;
 
-		@media (max-width: 800px) {
-			height: 22px;
-			width: 22px;
+		@media (max-width: 810px) {
+			height: 27px;
+			width: 27px;
 		}
 	}
 
@@ -48,5 +48,11 @@
 			background-color: var(--light-gray);
 			fill: var(--dark-gray);
 		}
+	}
+
+	.burger-icon {
+		height: 23px;
+		width: 23px;
+		padding: 6px;
 	}
 </style>

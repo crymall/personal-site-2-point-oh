@@ -16,17 +16,17 @@
 
 <style>
 	h1 {
-		margin: 15px 0 0 15px;
 		font-size: 27px;
+		margin: 0;
 	}
 
 	.sidenav {
 		display: flex;
 		flex-direction: column;
-		padding: 10px 15px 0 10px;
+		margin: 25px 15px 0 25px;
 		min-width: 275px;
 
-		@media (max-width: 800px) {
+		@media (max-width: 810px) {
 			display: none;
 		}
 	}
@@ -34,7 +34,7 @@
 	.nav-sections {
 		display: flex;
 		flex-direction: column;
-		margin: 30px 0 0 35px;
+		margin: 25px 0 0 30px;
 
 		a {
 			text-decoration: none;

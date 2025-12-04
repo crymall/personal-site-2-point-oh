@@ -29,7 +29,3 @@
 		line.
 	</p>
 </div>
-
-<style>
-
-</style>
