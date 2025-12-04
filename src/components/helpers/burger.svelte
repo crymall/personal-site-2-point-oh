@@ -65,11 +65,17 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin: 50px 0 0 15px;
+		margin: 25px 0 0 15px;
+		transition: margin 0.2s;
+
+		@media (max-width: 450px) {
+			margin: 50px 0 0 15px;
+		}
 
 		h2 {
 			margin: 0 0 25px 0;
 			font-size: 70px;
+			transition: font-size 0.2s;
 
 			@media (max-width: 450px) {
 				font-size: 46px;
@@ -80,6 +86,7 @@
 			text-decoration: none;
 			font-size: 34px;
 			margin: 0 0 20px 30px;
+			transition: font-size 0.2s;
 
 			@media (max-width: 450px) {
 				font-size: 30px;

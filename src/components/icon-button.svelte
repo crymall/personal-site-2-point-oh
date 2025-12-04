@@ -19,11 +19,14 @@
 		position: absolute;
 		height: 38px;
 		width: 38px;
-		top: 0;
-		right: 0;
+		top: 25px;
+		right: 25px;
 		z-index: 100;
+		transition: height 0.2s, width 0.2s, top 0.2s, right 0.2s;
 
 		@media (max-width: 810px) {
+			top: 0;
+			right: 0;
 			height: 35px;
 			width: 35px;
 		}

@@ -46,9 +46,13 @@
 		flex-direction: column;
 		margin: 25px 65px 0 40px;
 		max-width: 810px;
-		transition: padding 0.2s;
+		transition: margin 0.2s;
 
 		@media (max-width: 810px) {
+			margin: 25px 25px 0 15px;
+		}
+
+		@media (max-width: 450px) {
 			margin: 50px 25px 0 15px;
 		}
 	}
