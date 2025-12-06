@@ -1,5 +1,6 @@
 <script>
 	import { MediaQuery } from 'svelte/reactivity';
+	import { base } from '$app/paths';
 	import favicon from '$lib/assets/favicon.svg';
 	import { toggleDarkMode, burger } from '../utils/state.svelte';
 
@@ -11,8 +12,8 @@
 
 	const siteName = 'joseph reed gaines';
 	const navLinks = [
-		{ title: 'home', href: '/' },
-		{ title: 'contact', href: '/contact' }
+		{ title: 'home', href: `${base}/` },
+		{ title: 'contact', href: `${base}/contact` }
 	];
 </script>
 
