@@ -23,7 +23,7 @@
 	.sidenav {
 		display: flex;
 		flex-direction: column;
-		margin: 25px 15px 0 25px;
+		margin: 10px 15px 0 25px;
 		min-width: 275px;
 
 		@media (max-width: 810px) {

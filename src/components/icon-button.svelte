@@ -19,7 +19,7 @@
 		position: absolute;
 		height: 38px;
 		width: 38px;
-		top: 25px;
+		top: 10px;
 		right: 25px;
 		z-index: 100;
 		transition: height 0.2s, width 0.2s, top 0.2s, right 0.2s;

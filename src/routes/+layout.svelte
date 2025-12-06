@@ -48,7 +48,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin: 25px 65px 0 40px;
+		margin: 10px 65px 0 40px;
 		max-width: 810px;
 		max-height: 100dvh;
 		transition: margin 0.2s;
