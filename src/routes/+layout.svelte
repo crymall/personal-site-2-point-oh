@@ -1,7 +1,7 @@
 <script>
 	import { MediaQuery } from 'svelte/reactivity';
 	import favicon from '$lib/assets/favicon.svg';
-	import { toggleDarkMode } from '../utils/state.svelte';
+	import { toggleDarkMode, burger } from '../utils/state.svelte';
 
 	import Icon from '../components/helpers/icon.svelte';
 	import NavMenu from '../components/nav-menu.svelte';
@@ -24,9 +24,10 @@
 	<NavMenu header="joseph reed gaines" links={navLinks} />
 	<IconButton buttonClass="lamp-button" buttonFunc={toggleDarkMode} iconName={'lamp'} />
 
-	<div class="content">
-		{@render children()}
-
+	<div class='content'>
+		<div class='body-container' class:burgerized={burger.open}>
+			{@render children()}
+		</div>
 		<footer>
 			<p>© 2025 joseph reed gaines. all rights reserved.</p>
 		</footer>
@@ -39,6 +40,7 @@
 	.global-layout {
 		position: relative;
 		display: flex;
+		max-height: calc(100dvh - 30px);
 	}
 
 	.content {
@@ -47,6 +49,7 @@
 		justify-content: space-between;
 		margin: 25px 65px 0 40px;
 		max-width: 810px;
+		max-height: 100dvh;
 		transition: margin 0.2s;
 
 		@media (max-width: 810px) {
@@ -60,6 +63,10 @@
 		@media (max-width: 400px) {
 			margin: 50px 5px 0 5px;
 		}
+	}
+
+	.burgerized {
+		height: 0;
 	}
 
 	footer {

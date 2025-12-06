@@ -1,5 +1,5 @@
 export let theme = $state({
-  darkMode: true
+	darkMode: true
 });
 
 export const toggleDarkMode = () => {
@@ -7,3 +7,15 @@ export const toggleDarkMode = () => {
 	const body = document.querySelector('body');
 	body.className = theme.darkMode ? 'dark-mode' : '';
 };
+
+export let burger = $state({
+	open: false
+});
+
+export const toggleBurgerOpen = () => {
+	burger.open = !burger.open;
+};
+
+export const closeBurger = () => {
+	burger.open = false;
+}

@@ -1,16 +1,12 @@
 <script>
 	import IconButton from '../icon-button.svelte';
 	import { afterNavigate } from '$app/navigation';
+	import { burger, toggleBurgerOpen, closeBurger } from '../../utils/state.svelte';
 
 	let { links } = $props();
-	let burgerOpen = $state(false);
-
-	const toggleBurgerOpen = () => {
-		burgerOpen = !burgerOpen;
-	};
 
 	afterNavigate(() => {
-		burgerOpen = false;
+		closeBurger();
 	});
 </script>
 
@@ -22,7 +18,7 @@
 		iconClass="burger-icon"
 	/>
 
-	<nav id="burger" class:open={burgerOpen}>
+	<nav id="burger" class:open={burger.open}>
 		<div class="burger-sections">
 			<h2>j.r. gaines</h2>
 			{#each links as link}
@@ -53,8 +49,6 @@
 
 		position: fixed;
 		inset: 0;
-		width: 100%;
-		height: 100%;
 		margin: 15px;
 
 		z-index: 99;
@@ -85,7 +79,7 @@
 		a {
 			text-decoration: none;
 			font-size: 34px;
-			margin: 0 0 20px 30px;
+			margin: 0 0 20px 20px;
 			transition: font-size 0.2s;
 
 			@media (max-width: 450px) {
