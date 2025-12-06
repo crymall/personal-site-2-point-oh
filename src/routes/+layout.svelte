@@ -1,7 +1,7 @@
 <script>
 	import { MediaQuery } from 'svelte/reactivity';
 	import { base } from '$app/paths';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
 	import { toggleDarkMode, burger } from '../utils/state.svelte';
 
 	import Icon from '../components/helpers/icon.svelte';
