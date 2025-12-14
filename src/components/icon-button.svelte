@@ -2,10 +2,22 @@
 	import Icon from './helpers/icon.svelte';
 	import { theme } from '../utils/state.svelte';
 
-	let { focusable = false, buttonClass = '', buttonFunc, iconName, iconClass = '' } = $props();
+	let {
+		focusable = false,
+		buttonLabel,
+		buttonClass = '',
+		buttonFunc,
+		iconName,
+		iconClass = ''
+	} = $props();
 </script>
 
-<button type="button" onclick={buttonFunc} class="icon-button {buttonClass}">
+<button
+	type="button"
+	aria-label={buttonLabel}
+	onclick={buttonFunc}
+	class="icon-button {buttonClass}"
+>
 	<Icon name={iconName} className={`${theme.darkMode ? 'light-fill' : 'dark-fill'} ${iconClass}`} />
 </button>
 
@@ -22,7 +34,11 @@
 		top: 10px;
 		right: 25px;
 		z-index: 100;
-		transition: height 0.2s, width 0.2s, top 0.2s, right 0.2s;
+		transition:
+			height 0.2s,
+			width 0.2s,
+			top 0.2s,
+			right 0.2s;
 
 		@media (max-width: 810px) {
 			top: 0;

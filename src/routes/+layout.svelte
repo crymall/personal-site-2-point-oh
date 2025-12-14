@@ -23,10 +23,15 @@
 
 <div class="global-layout">
 	<NavMenu header="joseph reed gaines" links={navLinks} />
-	<IconButton buttonClass="lamp-button" buttonFunc={toggleDarkMode} iconName={'lamp'} />
+	<IconButton
+		buttonLabel="Toggle Dark Mode"
+		buttonClass="lamp-button"
+		buttonFunc={toggleDarkMode}
+		iconName={'lamp'}
+	/>
 
-	<div class='content'>
-		<div class='body-container' class:burgerized={burger.open}>
+	<div class="content">
+		<div class="body-container" class:burgerized={burger.open}>
 			{@render children()}
 		</div>
 		<footer>

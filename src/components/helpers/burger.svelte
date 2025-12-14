@@ -12,6 +12,7 @@
 
 <div id="burger-wrapper">
 	<IconButton
+		buttonLabel="Site Navigation"
 		buttonClass="burger-button"
 		buttonFunc={toggleBurgerOpen}
 		iconName="burger"
