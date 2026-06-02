@@ -62,7 +62,7 @@
 		width: 40%;
 		max-width: 240px;
 		height: auto;
-		margin: 10px 0 20px 20px;
+		margin: 5px 0 10px 20px;
 		border: 3px solid var(--dark-gray);
 		background-color: var(--light-gray);
 		transition: margin 0.2s;
