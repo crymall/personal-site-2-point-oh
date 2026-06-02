@@ -22,7 +22,7 @@
 	<nav id="burger" class:open={burger.open}>
 		<div class="burger-sections">
 			{#each links as link}
-				<a href={link.href}>{link.title}</a>
+				<a href={link.href} target={link.target || ''}>{link.title}</a>
 			{/each}
 		</div>
 	</nav>

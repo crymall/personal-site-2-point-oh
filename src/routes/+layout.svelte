@@ -15,6 +15,7 @@
 	const navLinks = [
 		{ title: 'Home', href: `${base}/` },
 		{ title: 'Contact', href: `${base}/contact` },
+		{ title: 'Resume', target: '_blank', href: `${base}/resume.pdf` },
 		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` }
 	];
 </script>
