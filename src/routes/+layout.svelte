@@ -3,6 +3,7 @@
 	import { base } from '$app/paths';
 	import favicon from '$lib/assets/favicon.png';
 	import { toggleDarkMode, burger } from '../utils/state.svelte';
+	import '../styles/global.css';
 
 	import Icon from '../components/helpers/icon.svelte';
 	import NavMenu from '../components/nav-menu.svelte';
@@ -12,8 +13,9 @@
 
 	const siteName = 'joseph reed gaines';
 	const navLinks = [
-		{ title: 'home', href: `${base}/` },
-		{ title: 'contact', href: `${base}/contact` }
+		{ title: 'Home', href: `${base}/` },
+		{ title: 'Contact', href: `${base}/contact` },
+		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` }
 	];
 </script>
 
@@ -22,7 +24,7 @@
 </svelte:head>
 
 <div class="global-layout">
-	<NavMenu header="joseph reed gaines" links={navLinks} />
+	<NavMenu header="Reed Gaines" links={navLinks} />
 	<IconButton
 		buttonLabel="Toggle Dark Mode"
 		buttonClass="lamp-button"
@@ -35,14 +37,12 @@
 			{@render children()}
 		</div>
 		<footer>
-			<p>© 2025 joseph reed gaines. all rights reserved.</p>
+			<p>© 2026 Joseph Reed Gaines</p>
 		</footer>
 	</div>
 </div>
 
 <style>
-	@import '../styles/global.css';
-
 	.global-layout {
 		position: relative;
 		display: flex;
@@ -73,16 +73,24 @@
 
 	.burgerized {
 		height: 0;
+		overflow: hidden;
 	}
 
 	footer {
-		margin-top: 30px;
+		margin: 30px 0 0 0;
 		font-style: italic;
-		z-index: 100;
+
+		@media (max-width: 810px) {
+			padding-bottom: 15px;
+		}
 
 		p {
-			margin: 10px 10px 0 10px;
+			margin: 10px 0px 10px 0px;
 			font-size: 14px;
+
+			@media (max-width: 450px) {
+				margin: 10px 0 0 0;
+			}
 		}
 	}
 </style>

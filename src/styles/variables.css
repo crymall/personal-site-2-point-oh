@@ -1,9 +1,4 @@
 :root {
-  --light-gray: lightgray;
+  --light-gray: #ebebeb;
   --dark-gray: #333333;
-}
-
-@font-face {
-  font-family: 'bitter';
-  src: url('../assets/bitter.ttf');
 }

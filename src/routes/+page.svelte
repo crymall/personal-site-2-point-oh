@@ -1,30 +1,68 @@
-<h2>hi there.</h2>
+<script>
+	import { base } from '$app/paths';
+	import meImage from '../assets/me.jpg';
+</script>
 
-<p>you can call me <span class="bold">Reed.</span></p>
+<h2>Hi there.</h2>
+
+<img src={meImage} alt="Joseph Reed Gaines" class="profile-pic" />
+<p>My full name is Joseph Reed Gaines, but you can call me <span class="bold">Reed.</span></p>
 
 <p>
-	i'm a <span class="bold">writer</span>, a <span class="bold">programmer</span>, a
-	<span class="bold">teacher</span>, a <span class="bold">photographer</span>, and most importantly,
-	someone trying to make his own little place in the world, just like you.
+	I'm a <span class="bold">developer</span>, a <span class="bold">writer</span>
+	and a <span class="bold">teacher</span>, with experience in the for-profit, nonprofit, academic,
+	enterprise, and small-business arenas.
 </p>
 
 <p>
-	in my work, i'm looking to collaborate on interesting projects with capable, kind people. i'm
-	particularly moved to make a positive social impact, and to share and acquire knowledge across
+	What motivates me? Care and purpose. Craft, curiosity, and lifelong learning. Consensus over the
+	need to be correct. I'm looking to collaborate on interesting projects with capable, kind people.
+	I'm particularly moved to make a positive social impact, and to share and acquire knowledge across
 	disciplines.
 </p>
 
 <p>
-	currently, i'm based in new england, and i'm open to remote and local opportunities, including:
+	I'm currently based in <span class="bold">Athens, Vermont</span>, but I'm moving to
+	<span class="bold">Los Angeles, California</span> within the year. I'm looking for remote and local
+	opportunities in Southern California. I'm available for full-time and freelance work.
 </p>
 
 <p>
-	<span class="bold purple">web development</span>, <span class="bold blue">photography</span>,
-	<span class="bold red">teaching</span>, <span class="bold green">online advertising</span>,
-	<span class="bold yellow">copywriting</span>, and anything adjacent to those pursuits.
+	In a world where you can't be sure who is real and who isn't (literally), I built this website to
+	demonstrate that I'm real. This is my deliberate digital footprint. Feel free to take a look
+	around, and if you think we have something to talk about, don't be shy—<a href="{base}/contact"
+		>say hi</a
+	>.
 </p>
 
-<p>
-	for now, i prefer freelance, but if you have something different in mind, feel free to drop me a
-	line.
-</p>
+<style>
+	.profile-pic {
+		float: right;
+		width: 40%;
+		max-width: 240px;
+		height: auto;
+		margin: 10px 0 20px 20px;
+		border: 3px solid var(--dark-gray);
+		transition: margin 0.2s;
+	}
+
+	:global(body.dark-mode) .profile-pic {
+		border-color: var(--light-gray);
+	}
+
+	@media (max-width: 650px) {
+		.profile-pic {
+			float: right;
+			width: 40%;
+			margin: 15px 0 15px 20px;
+			object-fit: cover;
+			object-position: center 20%;
+		}
+	}
+
+	@media (max-width: 450px) {
+		.profile-pic {
+			display: none;
+		}
+	}
+</style>

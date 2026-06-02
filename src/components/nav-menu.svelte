@@ -7,7 +7,7 @@
 	<h1>{header}</h1>
 	<div class="nav-sections">
 		{#each links as link}
-			<a href={link.href}>{link.title}</a>
+			<a href={link.href} target={link.target || ''}>{link.title}</a>
 		{/each}
 	</div>
 </nav>
@@ -17,14 +17,14 @@
 <style>
 	h1 {
 		font-size: 27px;
-		margin: 0;
+		margin: 20px 0 0 0;
 	}
 
 	.sidenav {
 		display: flex;
 		flex-direction: column;
-		margin: 10px 15px 0 25px;
-		min-width: 275px;
+		margin: 0 15px 0 25px;
+		min-width: 220px;
 
 		@media (max-width: 810px) {
 			display: none;
@@ -34,15 +34,16 @@
 	.nav-sections {
 		display: flex;
 		flex-direction: column;
-		margin: 25px 0 0 30px;
+		margin: 25px 0 0 0;
 
 		a {
 			text-decoration: none;
 			font-size: 20px;
 			margin-bottom: 14px;
+			font-style: italic;
 
 			&:hover {
-				font-style: italic;
+				font-style: normal;
 			}
 		}
 	}
