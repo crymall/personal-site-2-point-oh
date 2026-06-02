@@ -79,7 +79,9 @@
 		height: auto;
 		opacity: 0;
 		filter: brightness(1.15);
-		transition: opacity 0.4s ease-in, filter 0.2s;
+		transition:
+			opacity 0.4s ease-in,
+			filter 0.2s;
 	}
 
 	:global(body.dark-mode) .profile-pic {
@@ -92,15 +94,7 @@
 
 	@media (max-width: 650px) {
 		.profile-pic-wrapper {
-			float: right;
-			width: 40%;
 			margin: 15px 0 15px 20px;
-		}
-
-		.profile-pic {
-			aspect-ratio: 16 / 9;
-			object-fit: cover;
-			object-position: center 20%;
 		}
 	}
 

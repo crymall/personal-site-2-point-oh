@@ -91,6 +91,7 @@
 
 			@media (max-width: 450px) {
 				margin: 10px 0 0 0;
+				font-size: 12px;
 			}
 		}
 	}

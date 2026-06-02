@@ -60,7 +60,8 @@
 		flex-direction: column;
 
 		a {
-			text-decoration: none;
+			text-decoration: underline;
+			text-underline-offset: 7px;
 			font-size: 70px;
 			margin: 0 0 20px 0;
 			transition: font-size 0.2s;

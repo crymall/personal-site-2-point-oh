@@ -37,7 +37,8 @@
 		margin: 25px 0 0 0;
 
 		a {
-			text-decoration: none;
+			text-decoration: underline;
+			text-underline-offset: 3px;
 			font-size: 20px;
 			margin-bottom: 14px;
 			font-style: italic;
