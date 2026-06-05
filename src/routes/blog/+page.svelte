@@ -23,7 +23,6 @@
 					<a href={post.slug} class="postTitle">{post.title}</a>
 					<p class="postDate">{post.date}</p>
 				</div>
-				<p class="postDescription">{post.description}</p>
 				<p class="postSnippet">{post.snippet}</p>
 			</li>
 		{/each}
@@ -42,11 +41,9 @@
 	}
 
 	.pageTitle {
-		margin-bottom: 10px;
-		line-height: 1.22;
+		margin: 10px 0 10px 0;
 		transition:
 			margin-bottom 0.2s,
-			line-height 0.2s,
 			var(--theme-transition);
 
 		@media (max-width: 450px) {
@@ -56,14 +53,13 @@
 
 	.subtitle {
 		font-style: italic;
-		font-size: 14px;
+		font-size: 16px;
 		transition:
 			font-size 0.2s,
 			var(--theme-transition);
-		line-height: 1;
 
 		@media (max-width: 450px) {
-			font-size: 12px;
+			font-size: 14px;
 		}
 	}
 
@@ -90,11 +86,6 @@
 			border-color 0.2s,
 			background-color 0.2s;
 
-		&:first-of-type {
-			border-top: none;
-			padding-top: 0;
-		}
-
 		@media (max-width: 450px) {
 			padding-top: 25px;
 			margin-bottom: 25px;
@@ -103,27 +94,19 @@
 
 	:global(body.dark-mode) .post {
 		border-top: 2px dashed var(--light-gray);
-
-		&:first-of-type {
-			border-top: none;
-			padding-top: 0;
-		}
 	}
 
 	.postHeader {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
-		margin-bottom: 5px;
+		align-items: center;
 		transition: var(--theme-transition);
 	}
 
 	.postTitle {
 		font-size: 30px;
-		line-height: 1.28;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			var(--theme-transition);
 		text-decoration: underline;
 		text-underline-offset: 3px;
@@ -142,10 +125,8 @@
 	.postDate {
 		font-size: 12px;
 		margin: 0;
-		line-height: 1.38;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			var(--theme-transition);
 		font-style: italic;
 
@@ -155,27 +136,23 @@
 	}
 
 	.postDescription {
-		font-size: 14px;
-		margin: 5px 0 0 0;
+		font-size: 16px;
+		margin: 0;
 		font-style: italic;
-		line-height: 1.38;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			var(--theme-transition);
 
 		@media (max-width: 450px) {
-			font-size: 12px;
+			font-size: 14px;
 		}
 	}
 
 	.postSnippet {
-		font-size: 16px;
+		font-size: 18px;
 		margin: 10px 0 0 0;
-		line-height: 1.38;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 		width: 95%;
@@ -186,7 +163,7 @@
 		overflow: hidden;
 
 		@media (max-width: 450px) {
-			font-size: 14px;
+			font-size: 16px;
 			margin: 5px 0 0 0;
 		}
 	}
@@ -207,7 +184,7 @@
 		border: none;
 		padding: 5px 12px;
 		cursor: pointer;
-		font-size: 14px;
+		font-size: 16px;
 		border-radius: 3px;
 		transition:
 			padding 0.2s,
@@ -215,7 +192,7 @@
 			var(--theme-transition);
 
 		@media (max-width: 450px) {
-			font-size: 12px;
+			font-size: 14px;
 			padding: 4px 10px;
 		}
 	}
@@ -243,10 +220,8 @@
 	.page-info {
 		font-style: italic;
 		font-size: 16px;
-		line-height: 1.38;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			var(--theme-transition);
 
 		@media (max-width: 450px) {

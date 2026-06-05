@@ -22,36 +22,20 @@
 	.articleTitle {
 		font-size: 50px;
 		margin: 0 0 10px -2px;
-		line-height: 1.22;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
 		@media (max-width: 450px) {
-			font-size: 25px;
+			font-size: 35px;
 			margin: 0 0 5px -2px;
-		}
-	}
-
-	.prose :global(p) {
-		font-size: 16px;
-		line-height: 1.38;
-		transition:
-			font-size 0.2s,
-			line-height 0.2s,
-			var(--theme-transition);
-
-		@media (max-width: 450px) {
-			font-size: 14px;
 		}
 	}
 
 	.prose :global(p:has(img) + p:has(> em:only-child)),
 	.prose :global(img + em) {
 		display: block;
-		line-height: 1;
 		font-size: 12px;
 		text-align: right;
 		transition:
@@ -67,10 +51,8 @@
 		font-size: 40px;
 		font-weight: normal;
 		margin: 30px 0;
-		line-height: 1.28;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
@@ -84,10 +66,8 @@
 		font-size: 30px;
 		font-weight: normal;
 		margin: 25px 0;
-		line-height: 1.28;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
@@ -101,10 +81,8 @@
 		font-size: 20px;
 		font-weight: normal;
 		margin: 25px 0;
-		line-height: 1.28;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
@@ -118,10 +96,8 @@
 		font-size: 18px;
 		font-weight: normal;
 		margin: 20px 0;
-		line-height: 1.28;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
@@ -144,10 +120,8 @@
 
 	.prose :global(blockquote p) {
 		font-size: 20px;
-		line-height: 1.38;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			var(--theme-transition);
 
 		@media (max-width: 450px) {
@@ -158,7 +132,6 @@
 	.prose :global(pre) {
 		margin: 30px 0;
 		padding: 15px 15px;
-		line-height: 1.4;
 		transition: margin 0.2s padding 0.2s;
 
 		@media (max-width: 450px) {
@@ -169,7 +142,6 @@
 
 	.prose :global(ul) {
 		list-style: circle;
-		line-height: 1.3;
 		margin: 15px 0 0 0;
 		font-size: 16px;
 		transition:
@@ -184,7 +156,6 @@
 	}
 
 	.prose :global(ol) {
-		line-height: 1.3;
 		margin: 15px 0 0 0;
 		font-size: 16px;
 		transition:
@@ -217,10 +188,8 @@
 	.meta {
 		font-size: 12px;
 		font-style: italic;
-		line-height: 1.38;
 		transition:
 			font-size 0.2s,
-			line-height 0.2s,
 			margin-bottom 0.2s,
 			var(--theme-transition);
 		margin: 0;
