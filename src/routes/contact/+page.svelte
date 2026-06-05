@@ -1,4 +1,4 @@
-<h2>Drop a line.</h2>
+<h2>Drop a line</h2>
 
 <p>
 	All old, new, and prospective friends, colleagues and students are encouraged to <span

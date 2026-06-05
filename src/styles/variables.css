@@ -1,4 +1,6 @@
 :root {
   --light-gray: #ebebeb;
   --dark-gray: #333333;
+  --highlight: #c62828;
+  --theme-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }

@@ -1,6 +1,8 @@
 <script>
 	import { MediaQuery } from 'svelte/reactivity';
 	import { base } from '$app/paths';
+	import { afterNavigate } from '$app/navigation';
+	import { page } from '$app/stores';
 	import favicon from '$lib/assets/favicon.png';
 	import { toggleDarkMode, burger } from '../utils/state.svelte';
 	import '../styles/global.css';
@@ -11,17 +13,36 @@
 
 	let { children } = $props();
 
-	const siteName = 'joseph reed gaines';
+	const siteName = 'Joseph Reed Gaines';
 	const navLinks = [
 		{ title: 'Home', href: `${base}/` },
 		{ title: 'Contact', href: `${base}/contact` },
 		{ title: 'Resume', target: '_blank', href: `${base}/resume.pdf` },
-		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` }
+		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` },
+		{ title: 'Blog', href: `${base}/blog` }
 	];
+
+	afterNavigate(() => {
+		const images = document.querySelectorAll('img');
+		images.forEach((img) => {
+			if (img.complete) {
+				img.classList.add('loaded');
+			} else {
+				img.addEventListener('load', () => img.classList.add('loaded'));
+			}
+		});
+	});
+
+	let pageTitle = $derived($page.data.meta?.title || 'Joseph Reed Gaines');
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>{pageTitle}</title>
+	<meta
+		name="description"
+		content="Joseph Reed Gaines is a web developer, teacher, writer, and friend. This is his personal and professional website."
+	/>
 </svelte:head>
 
 <div class="global-layout">
@@ -47,7 +68,7 @@
 	.global-layout {
 		position: relative;
 		display: flex;
-		max-height: calc(100dvh - 30px);
+		min-height: calc(100dvh - 30px);
 	}
 
 	.content {
@@ -56,8 +77,10 @@
 		justify-content: space-between;
 		margin: 10px 65px 0 40px;
 		max-width: 810px;
-		max-height: 100dvh;
-		transition: margin 0.2s;
+		flex: 1;
+		transition:
+			margin 0.2s,
+			var(--theme-transition);
 
 		@media (max-width: 810px) {
 			margin: 25px 25px 0 15px;
@@ -80,17 +103,29 @@
 	footer {
 		margin: 30px 0 0 0;
 		font-style: italic;
+		transition:
+			margin 0.2s,
+			padding-bottom 0.2s,
+			var(--theme-transition);
 
 		@media (max-width: 810px) {
 			padding-bottom: 15px;
 		}
 
+		@media (max-width: 450px) {
+			margin: 20px 0 0 0;
+		}
+
 		p {
-			margin: 10px 0px 10px 0px;
+			margin: 15px 0px 10px 0px;
 			font-size: 14px;
+			transition:
+				margin 0.2s,
+				font-size 0.2s,
+				var(--theme-transition);
 
 			@media (max-width: 450px) {
-				margin: 10px 0 0 0;
+				margin: 10px 0 5px 0;
 				font-size: 12px;
 			}
 		}

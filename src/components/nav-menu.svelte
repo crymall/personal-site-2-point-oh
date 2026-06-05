@@ -24,7 +24,7 @@
 		display: flex;
 		flex-direction: column;
 		margin: 0 15px 0 25px;
-		min-width: 220px;
+		min-width: 205px;
 
 		@media (max-width: 810px) {
 			display: none;
@@ -37,8 +37,6 @@
 		margin: 25px 0 0 0;
 
 		a {
-			text-decoration: underline;
-			text-underline-offset: 3px;
 			font-size: 20px;
 			margin-bottom: 14px;
 			font-style: italic;

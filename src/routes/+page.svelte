@@ -5,26 +5,17 @@
 <script>
 	import { base } from '$app/paths';
 	import meImage from '../assets/me.jpg';
-
-	let loaded = $state(imageAlreadyLoaded);
-
-	function handleLoad() {
-		loaded = true;
-		imageAlreadyLoaded = true;
-	}
 </script>
 
-<h2>Hi there.</h2>
+<h2>Hi there</h2>
 
 <div class="profile-pic-wrapper">
 	<img
 		src={meImage}
 		alt="Joseph Reed Gaines"
 		class="profile-pic"
-		class:loaded
 		width="2000"
 		height="3000"
-		onload={handleLoad}
 	/>
 </div>
 <p>My full name is Joseph Reed Gaines, but you can call me <span class="bold">Reed.</span></p>
@@ -63,33 +54,14 @@
 		max-width: 240px;
 		height: auto;
 		margin: 5px 0 10px 20px;
-		border: 3px solid var(--dark-gray);
-		background-color: var(--light-gray);
-		transition: margin 0.2s;
+		transition: margin 0.2s,
+			var(--theme-transition);
 		display: flex;
-	}
-
-	:global(body.dark-mode) .profile-pic-wrapper {
-		border-color: var(--light-gray);
-		background-color: var(--dark-gray);
 	}
 
 	.profile-pic {
 		width: 100%;
 		height: auto;
-		opacity: 0;
-		filter: brightness(1.15);
-		transition:
-			opacity 0.4s ease-in,
-			filter 0.2s;
-	}
-
-	:global(body.dark-mode) .profile-pic {
-		filter: brightness(1);
-	}
-
-	.profile-pic.loaded {
-		opacity: 1;
 	}
 
 	@media (max-width: 650px) {

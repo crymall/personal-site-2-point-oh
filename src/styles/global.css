@@ -20,10 +20,11 @@ body {
 	min-height: 100%;
 	max-width: 1100px;
 	overflow-y: auto;
+	transition: background-color 0.2s, border-color 0.2s;
 
 	.global-layout {
 		display: flex;
-		height: 100%;
+		min-height: 100%;
 	}
 
 	h1 {
@@ -38,6 +39,34 @@ body {
 	button {
 		color: var(--dark-gray);
 		font-family: 'bitter', 'serif';
+		transition: var(--theme-transition);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		border: 3px solid var(--dark-gray);
+		background-color: var(--light-gray);
+		opacity: 0;
+		filter: brightness(1.1);
+		transition: opacity 0.4s ease-in,
+			filter 0.2s,
+			var(--theme-transition);
+	}
+
+	img.loaded {
+		opacity: 1;
+	}
+
+	a {
+		text-decoration: underline;
+		text-decoration-color: var(--highlight);
+		text-underline-offset: 3px;
+		text-decoration-thickness: 2px;
+
+		&:hover {
+			font-style: italic;
+		}
 	}
 
 	footer {
@@ -71,6 +100,12 @@ body.dark-mode {
 		color: var(--light-gray);
 	}
 
+	img {
+		border-color: var(--light-gray);
+		background-color: var(--dark-gray);
+		filter: brightness(1);
+	}
+
 	footer {
 		@media (max-width: 810px) {
 			border-top: 3px solid var(--light-gray);
@@ -84,6 +119,16 @@ body.dark-mode {
 	.sidenav {
 		border-right: 3px solid var(--light-gray);
 	}
+
+	.shiki,
+	.shiki span {
+		transition: var(--theme-transition);
+		color: var(--shiki-dark) !important;
+		background-color: var(--shiki-dark-bg) !important;
+		font-style: var(--shiki-dark-font-style) !important;
+		font-weight: var(--shiki-dark-font-weight) !important;
+		text-decoration: var(--shiki-dark-text-decoration) !important;
+	}
 }
 
 .hidden {
@@ -91,28 +136,35 @@ body.dark-mode {
 }
 
 .body-container {
+	padding-left: 5px;
+	flex-grow: 1;
+	position: relative;
+
 	h2 {
-		margin: 10px 0 10px 0;
+		margin: 10px 0 20px -4px;
 		font-size: 70px;
 		font-weight: normal;
-		transition: font-size 0.2s, margin 0.2s;
+		transition: font-size 0.2s, margin 0.2s,
+			var(--theme-transition);
 
 		@media (max-width: 450px) {
 			font-size: 45px;
-			margin: 0 0 20px 0;
+			margin: 0 0 20px -5px;
 		}
 	}
 
 	p {
 		font-size: 18px;
 		line-height: 26px;
-		margin: 15px 0 0 5px;
+		margin: 15px 0 0 0;
 
-		transition: font-size 0.2s;
+		transition: font-size 0.2s, margin 0.2s, line-height 0.2s,
+			var(--theme-transition);
 
 		@media (max-width: 450px) {
 			font-size: 16px;
 			line-height: 20px;
+			margin: 10px 0 0 0;
 		}
 	}
 

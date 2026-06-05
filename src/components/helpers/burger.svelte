@@ -64,7 +64,8 @@
 			text-underline-offset: 7px;
 			font-size: 70px;
 			margin: 0 0 20px 0;
-			transition: font-size 0.2s;
+			transition: font-size 0.2s,
+			var(--theme-transition);
 			font-style: italic;
 
 			@media (max-width: 450px) {

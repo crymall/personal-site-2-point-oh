@@ -20,11 +20,10 @@
 		height: 30px;
 		width: 30px;
 
-		transition:
-			background-color 0.15s,
+		transition: background-color 0.15s,
 			fill 0.15s,
 			height 0.2s,
-			width 0.2s;
+			width 0.2s, border-color 0.2s;
 
 		@media (max-width: 810px) {
 			height: 27px;

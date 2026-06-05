@@ -1,8 +1,37 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex, escapeSvelte } from 'mdsvex';
+import { codeToHtml } from 'shiki';
 
-/** @type {import('@sveltejs/kit').Config} */
+const mdsvexOptions = {
+	extensions: ['.md'],
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			let html;
+			try {
+				html = await codeToHtml(code, {
+					lang,
+					themes: {
+						light: 'github-light',
+						dark: 'github-dark'
+					}
+				});
+			} catch (e) {
+				html = await codeToHtml(code, {
+					lang: 'text',
+					themes: {
+						light: 'github-light',
+						dark: 'github-dark'
+					}
+				});
+			}
+			return `{@html \`${escapeSvelte(html)}\` }`;
+		}
+	}
+};
+
 const config = {
+	extensions: ['.svelte', '.md'],
 	kit: {
 		adapter: adapter({
 			pages: 'build',
@@ -15,7 +44,7 @@ const config = {
 			base: ''
 		}
 	},
-	preprocess: [vitePreprocess()]
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)]
 };
 
 export default config;
