@@ -154,7 +154,7 @@ body.dark-mode {
 		}
 	}
 
-	p {
+	p, ul {
 		font-size: 18px;
 		margin: 15px 0 0 0;
 
@@ -175,5 +175,161 @@ body.dark-mode {
 
 	.bold {
 		font-weight: bold;
+	}
+}
+
+.prose {
+	margin-top: 20px;
+	transition:
+		margin-top 0.2s,
+		var(--theme-transition);
+
+	@media (max-width: 450px) {
+		margin-top: 10px;
+	}
+
+	p:has(img) + p:has(> em:only-child),
+	img + em {
+		display: block;
+		font-size: 12px;
+		text-align: right;
+		transition:
+			font-size 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			font-size: 10px;
+		}
+	}
+
+	h1 {
+		font-size: 40px;
+		font-weight: normal;
+		margin: 30px 0;
+		transition:
+			font-size 0.2s,
+			margin 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			font-size: 22px;
+			margin: 20px 0;
+		}
+	}
+
+	h2 {
+		font-size: 30px;
+		font-weight: normal;
+		margin: 25px 0;
+		transition:
+			font-size 0.2s,
+			margin 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			font-size: 20px;
+			margin: 15px 0;
+		}
+	}
+
+	h3 {
+		font-size: 20px;
+		font-weight: normal;
+		margin: 25px 0;
+		transition:
+			font-size 0.2s,
+			margin 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			font-size: 18px;
+			margin: 15px 0;
+		}
+	}
+
+	h4 {
+		font-size: 18px;
+		font-weight: normal;
+		margin: 20px 0;
+		transition:
+			font-size 0.2s,
+			margin 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			font-size: 16px;
+			margin: 15px 0;
+		}
+	}
+
+	blockquote {
+		margin: 25px 40px;
+		transition:
+			margin 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			margin: 20px 30px;
+		}
+
+		p {
+			font-size: 20px;
+			transition:
+				font-size 0.2s,
+				var(--theme-transition);
+
+			@media (max-width: 450px) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	pre {
+		margin: 30px 0;
+		padding: 15px 15px;
+		transition: margin 0.2s padding 0.2s;
+
+		@media (max-width: 450px) {
+			padding: 10px 10px;
+			margin: 20px 0;
+		}
+	}
+
+	ul {
+		list-style: circle;
+		margin: 15px 0 0 0;
+		font-size: 16px;
+		transition:
+			margin 0.2s,
+			font-size 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			margin: 10px 0 0 0;
+			font-size: 14px;
+		}
+	}
+
+	ol {
+		margin: 15px 0 0 0;
+		font-size: 16px;
+		transition:
+			margin 0.2s,
+			font-size 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 450px) {
+			margin: 10px 0 0 0;
+			font-size: 14px;
+		}
+	}
+
+	li ul,
+	li ol {
+		margin-top: 0;
+
+		@media (max-width: 450px) {
+			margin-top: 0;
+		}
 	}
 }

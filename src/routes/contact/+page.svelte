@@ -34,6 +34,6 @@
 	}
 
 	li {
-		margin-top: 7px;
+		margin-top: 5px;
 	}
 </style>
