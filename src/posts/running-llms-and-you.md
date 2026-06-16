@@ -4,7 +4,7 @@ date: '6/16/2026'
 published: true
 ---
 
-![A photograph of people hiking in southern Vermont](/blog/running-llms-and-you/take_a_hike.jpg)
+![A photograph of people hiking in southern Vermont](../assets/blog/running-llms-and-you/take_a_hike.jpg)
 
 > "Oh, she says well, you’re not a poor man. You know, why don’t you go online and buy a hundred envelopes and put them in the closet? And so I pretend not to hear her. And go out to get an envelope because I’m going to have a hell of a good time in the process of buying one envelope. I meet a lot of people. And, see some great looking babes. And a fire engine goes by. And I give them the thumbs up. And, and ask a woman what kind of dog that is. And, and I don’t know. The moral of the story is, is we’re here on Earth to fart around. And, of course, the computers will do us out of that. And, what the computer people don’t realize, or they don’t care, is we’re dancing animals.” -Kurt Vonnegut
 
@@ -80,4 +80,4 @@ Thanks for reading.
 
 I've developed a habit of photographing small shrines. Walking around Los Angeles, you find quite a few. I found this one to be particularly beautiful with the deep purple hues of the surrounding succulents. My Canon 5D Classic captured the color like only an old Canon can.
 
-![A photograph of a small statue of the virgin Mary surrounded by purple succulents](/blog/running-llms-and-you/succulent_mary.jpg)
+![A photograph of a small statue of the virgin Mary surrounded by purple succulents](../assets/blog/running-llms-and-you/succulent_mary.jpg)

@@ -20,7 +20,7 @@ In terms of frequency, I'm going to be aiming for weekly. In terms of content, I
 
 All of my posts, however, will end with a photograph. Because I like taking photographs, and I don't know what else to do with them but share them. This is a photo of some pigeons flying in Ridgewood. They got scared because I was coming through. It's one of the first photos I ever took on my Canon 5D Classic, and still one of my favorites.
 
-![A photograph of pigeons flying in Ridgewood](/blog/choo-choo/ridgewood_pigeons.jpg)
+![A photograph of pigeons flying in Ridgewood](../assets/blog/choo-choo/ridgewood_pigeons.jpg)
 _Background blown out to get detail in the birds. That's life._
 
 Thanks for reading.
