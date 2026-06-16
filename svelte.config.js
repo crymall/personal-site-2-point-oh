@@ -42,6 +42,9 @@ const config = {
 		}),
 		paths: {
 			base: ''
+		},
+		version: {
+			name: Date.now().toString()
 		}
 	},
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)]
