@@ -21,13 +21,14 @@
 <style>
 	.articleTitle {
 		font-size: 50px;
-		margin: 0;
+		margin: 10px 0 0 0;
 		transition:
 			font-size 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
 		@media (max-width: 450px) {
+			margin: 0;
 			font-size: 35px;
 		}
 	}

@@ -16,7 +16,7 @@ const mdsvexOptions = {
 						dark: 'github-dark'
 					}
 				});
-			} catch (e) {
+			} catch {
 				html = await codeToHtml(code, {
 					lang: 'text',
 					themes: {
