@@ -1,7 +1,3 @@
-<script module>
-	let imageAlreadyLoaded = false;
-</script>
-
 <script>
 	import { base } from '$app/paths';
 	import meImage from '../assets/me.jpg';

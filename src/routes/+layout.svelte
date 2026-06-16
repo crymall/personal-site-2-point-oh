@@ -1,5 +1,4 @@
 <script>
-	import { MediaQuery } from 'svelte/reactivity';
 	import { base } from '$app/paths';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
@@ -7,13 +6,11 @@
 	import { toggleDarkMode, burger } from '../utils/state.svelte';
 	import '../styles/global.css';
 
-	import Icon from '../components/helpers/icon.svelte';
 	import NavMenu from '../components/nav-menu.svelte';
 	import IconButton from '../components/icon-button.svelte';
 
 	let { children } = $props();
 
-	const siteName = 'Joseph Reed Gaines';
 	const navLinks = [
 		{ title: 'Home', href: `${base}/` },
 		{ title: 'Contact', href: `${base}/contact` },
@@ -51,7 +48,7 @@
 		buttonLabel="Toggle Dark Mode"
 		buttonClass="lamp-button"
 		buttonFunc={toggleDarkMode}
-		iconName={'lamp'}
+		iconName="lamp"
 	/>
 
 	<div class="content">
