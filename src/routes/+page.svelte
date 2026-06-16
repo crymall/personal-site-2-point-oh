@@ -1,13 +1,12 @@
 <script>
 	import { base } from '$app/paths';
-	import meImage from '../assets/me.jpg';
 </script>
 
 <h2>Hi there</h2>
 
 <div class="profile-pic-wrapper">
-	<img
-		src={meImage}
+	<enhanced:img
+		src="../assets/me.jpg"
 		alt="Joseph Reed Gaines"
 		class="profile-pic"
 		width="2000"
