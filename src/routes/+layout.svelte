@@ -16,7 +16,7 @@
 		{ title: 'Contact', href: `${base}/contact` },
 		{ title: 'Resume', target: '_blank', href: `${base}/resume.pdf` },
 		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` },
-		{ title: 'Blog', href: `${base}/blog` }
+		// { title: 'Blog', href: `${base}/blog` }
 	];
 
 	afterNavigate(() => {
