@@ -18,14 +18,7 @@
 <p>
 	I'm a <span class="bold">developer</span>, a <span class="bold">writer</span>
 	and a <span class="bold">teacher</span>, with experience in the for-profit, nonprofit, academic,
-	enterprise, and small-business arenas.
-</p>
-
-<p>
-	What motivates me? Care and purpose. Craft, curiosity, and lifelong learning. Consensus over the
-	need to be correct. Collaborating on interesting projects with capable, kind people. I'm
-	particularly moved to make a positive social impact, and to share and acquire knowledge across
-	disciplines.
+	enterprise, and small-business arenas. I think I'm pretty cool, but mostly, I just try to be kind.
 </p>
 
 <p>
