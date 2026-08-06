@@ -29,8 +29,7 @@
 </p>
 
 <p>
-	I'm currently based in <span class="bold">Athens, Vermont</span>, but I'm moving to
-	<span class="bold">Los Angeles, California</span> within the year. I'm looking for remote and local
+	I'm based in <span class="bold">Los Angeles, California</span>. I'm looking for remote and local
 	opportunities in Southern California. I'm available for full-time and freelance work.
 </p>
 
@@ -49,7 +48,8 @@
 		max-width: 240px;
 		height: auto;
 		margin: 5px 0 10px 20px;
-		transition: margin 0.2s,
+		transition:
+			margin 0.2s,
 			var(--theme-transition);
 		display: flex;
 	}
