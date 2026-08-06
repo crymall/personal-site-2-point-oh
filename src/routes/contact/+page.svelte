@@ -9,7 +9,9 @@
 <p>
 	I'm accessible via <a href="mailto:reed.gaines@gmail.com">email</a>,
 	<a href="https://github.com/crymall" target="_blank">GitHub</a>, and
-	<a target="_blank" href="https://www.linkedin.com/in/reed-gaines-64157269/">LinkedIn</a>.
+	<a target="_blank" href="https://www.linkedin.com/in/reed-gaines-64157269/">LinkedIn</a>. Have a
+	look at my <a target="_blank" href="https://flickr.com/people/202155767@N04/">photography</a>, if
+	you'd like.
 </p>
 
 <p>Potential topics for conversation include:</p>
