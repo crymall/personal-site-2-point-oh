@@ -3,6 +3,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			document.documentElement.classList.add('js');
+
+			const revealImage = (event) => {
+				if (event.target.tagName === 'IMG') event.target.classList.add('loaded');
+			};
+			// capture phase: load and error do not bubble
+			document.addEventListener('load', revealImage, true);
+			document.addEventListener('error', revealImage, true);
+
+			document.addEventListener('DOMContentLoaded', () => {
+				for (const img of document.querySelectorAll('img')) {
+					if (img.complete) img.classList.add('loaded');
+				}
+			});
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover" class="dark-mode">

@@ -7,3 +7,6 @@ bun.lockb
 
 # Miscellaneous
 /static/
+
+# Machine-local editor state, not part of the project
+.claude/

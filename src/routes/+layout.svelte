@@ -1,6 +1,5 @@
 <script>
-	import { base } from '$app/paths';
-	import { afterNavigate } from '$app/navigation';
+	import { asset, resolve } from '$app/paths';
 	import { page } from '$app/stores';
 	import favicon from '$lib/assets/favicon.png';
 	import { toggleDarkMode, burger } from '../utils/state.svelte';
@@ -12,23 +11,12 @@
 	let { children } = $props();
 
 	const navLinks = [
-		{ title: 'Home', href: `${base}/` },
-		{ title: 'Contact', href: `${base}/contact` },
-		{ title: 'Resume', target: '_blank', href: `${base}/resume.pdf` },
-		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` },
-		// { title: 'Blog', href: `${base}/blog` }
+		{ title: 'Home', href: resolve('/') },
+		{ title: 'Contact', href: resolve('/contact') },
+		{ title: 'Resume', target: '_blank', href: asset('/resume.pdf') },
+		{ title: 'Portfolio', target: '_blank', href: `https://midden.reedgaines.com` }
+		// { title: 'Blog', href: resolve('/blog') }
 	];
-
-	afterNavigate(() => {
-		const images = document.querySelectorAll('img');
-		images.forEach((img) => {
-			if (img.complete) {
-				img.classList.add('loaded');
-			} else {
-				img.addEventListener('load', () => img.classList.add('loaded'));
-			}
-		});
-	});
 
 	let pageTitle = $derived($page.data.meta?.title || 'Joseph Reed Gaines');
 </script>
@@ -65,65 +53,67 @@
 	.global-layout {
 		position: relative;
 		display: flex;
-		min-height: calc(100dvh - 30px);
+		min-height: calc(100dvh - 38px);
 	}
 
 	.content {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin: 10px 65px 0 40px;
-		max-width: 810px;
+		margin: 13px 81px 0 50px;
+		max-width: 1013px;
 		flex: 1;
 		transition:
 			margin 0.2s,
 			var(--theme-transition);
 
-		@media (max-width: 810px) {
-			margin: 25px 25px 0 15px;
+		@media (max-width: 1013px) {
+			margin: 31px 31px 0 19px;
 		}
 
-		@media (max-width: 450px) {
-			margin: 50px 15px 0 15px;
+		@media (max-width: 563px) {
+			margin: 63px 19px 0 19px;
 		}
 
-		@media (max-width: 400px) {
-			margin: 50px 5px 0 5px;
+		@media (max-width: 500px) {
+			margin: 63px 6px 0 6px;
 		}
 	}
 
 	.burgerized {
-		height: 0;
-		overflow: hidden;
+		@media (max-width: 1013px) {
+			height: 0;
+			overflow: hidden;
+		}
 	}
 
 	footer {
-		margin: 30px 0 0 0;
+		margin: 38px 0 0 0;
 		font-style: italic;
 		transition:
 			margin 0.2s,
 			padding-bottom 0.2s,
 			var(--theme-transition);
 
-		@media (max-width: 810px) {
-			padding-bottom: 15px;
+		@media (max-width: 1013px) {
+			padding-bottom: 19px;
 		}
 
-		@media (max-width: 450px) {
-			margin: 20px 0 0 0;
+		@media (max-width: 563px) {
+			margin: 25px 0 0 0;
 		}
 
 		p {
-			margin: 15px 0px 10px 0px;
-			font-size: 14px;
+			margin: 19px 0px 13px 0px;
+			font-size: 18px;
 			transition:
 				margin 0.2s,
 				font-size 0.2s,
 				var(--theme-transition);
 
-			@media (max-width: 450px) {
-				margin: 10px 0 5px 0;
-				font-size: 12px;
+			@media (max-width: 563px) {
+				margin: 13px 0 6px 0;
+				font-size: 15px;
 			}
 		}
 	}
