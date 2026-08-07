@@ -21,7 +21,8 @@
 
 	<nav id="burger" class:open={burger.open}>
 		<div class="burger-sections">
-			{#each links as link}
+			{#each links as link (link.href)}
+				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- hrefs arrive already resolved from the caller -->
 				<a href={link.href} target={link.target || ''}>{link.title}</a>
 			{/each}
 		</div>
@@ -30,11 +31,7 @@
 
 <style>
 	#burger-wrapper {
-		display: none;
-
-		@media (max-width: 810px) {
-			display: block;
-		}
+		display: contents;
 	}
 
 	#burger {
@@ -42,17 +39,20 @@
 	}
 
 	#burger.open {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@media (max-width: 1013px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 
-		position: fixed;
-		inset: 0;
-		margin: 15px;
+			position: fixed;
+			inset: 0;
 
-		z-index: 99;
-		overflow-y: auto;
+			margin: 19px;
+
+			z-index: 99;
+			overflow-y: auto;
+		}
 	}
 
 	.burger-sections {
@@ -61,22 +61,24 @@
 
 		a {
 			text-decoration: underline;
-			text-underline-offset: 7px;
-			text-decoration-thickness: 3px;
+			text-underline-offset: 9px;
+			text-decoration-thickness: 6px;
 			text-decoration-color: var(--highlight);
-			font-size: 70px;
-			margin: 0 0 20px 0;
+			font-size: 88px;
+			margin: 0 0 25px 0;
 			transition:
 				font-size 0.2s,
 				var(--theme-transition);
 			font-style: italic;
 
-			@media (max-width: 450px) {
-				font-size: 45px;
+			@media (max-width: 563px) {
+				font-size: 56px;
 			}
 
-			&:hover {
-				font-style: normal;
+			@media (hover: hover) {
+				&:hover {
+					font-style: normal;
+				}
 			}
 		}
 	}

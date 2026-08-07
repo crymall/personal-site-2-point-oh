@@ -20,21 +20,21 @@
 
 <style>
 	.articleTitle {
-		font-size: 50px;
-		margin: 10px 0 0 0;
+		font-size: 63px;
+		margin: 13px 0 0 0;
 		transition:
 			font-size 0.2s,
 			margin 0.2s,
 			var(--theme-transition);
 
-		@media (max-width: 450px) {
+		@media (max-width: 563px) {
 			margin: 0;
-			font-size: 35px;
+			font-size: 44px;
 		}
 	}
 
 	.meta {
-		font-size: 12px;
+		font-size: 15px;
 		font-style: italic;
 		transition:
 			font-size 0.2s,
@@ -42,8 +42,8 @@
 			var(--theme-transition);
 		margin: 0;
 
-		@media (max-width: 450px) {
-			font-size: 10px;
+		@media (max-width: 563px) {
+			font-size: 13px;
 		}
 	}
 </style>

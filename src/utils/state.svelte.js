@@ -18,4 +18,4 @@ export const toggleBurgerOpen = () => {
 
 export const closeBurger = () => {
 	burger.open = false;
-}
+};
