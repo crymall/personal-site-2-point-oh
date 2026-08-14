@@ -18,7 +18,11 @@
 	onclick={buttonFunc}
 	class="icon-button {buttonClass}"
 >
-	<Icon name={iconName} className={`${theme.darkMode ? 'light-fill' : 'dark-fill'} ${iconClass}`} />
+	<Icon
+		name={iconName}
+		{focusable}
+		className={`${theme.darkMode ? 'light-fill' : 'dark-fill'} ${iconClass}`}
+	/>
 </button>
 
 <style>
@@ -29,31 +33,47 @@
 
 	.lamp-button {
 		position: absolute;
-		height: 38px;
-		width: 38px;
-		top: 10px;
-		right: 25px;
+		height: 48px;
+		width: 48px;
+		top: 13px;
+		right: 31px;
 		z-index: 100;
-		transition: height 0.2s,
+		transition:
+			height 0.2s,
 			width 0.2s,
 			top 0.2s,
 			right 0.2s,
 			var(--theme-transition);
 
-		@media (max-width: 810px) {
+		@media (max-width: 1013px) {
 			top: 0;
 			right: 0;
-			height: 35px;
-			width: 35px;
+			height: 44px;
+			width: 44px;
 		}
 	}
 
 	.burger-button {
 		position: absolute;
 		top: 0;
-		right: 50px;
-		height: 35px;
-		width: 35px;
+		right: 63px;
+		height: 44px;
+		width: 44px;
 		z-index: 100;
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			opacity 0.2s,
+			visibility 0s 0.2s,
+			var(--theme-transition);
+
+		@media (max-width: 1013px) {
+			opacity: 1;
+			visibility: visible;
+			transition:
+				opacity 0.2s,
+				visibility 0s,
+				var(--theme-transition);
+		}
 	}
 </style>
